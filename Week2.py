@@ -7,12 +7,14 @@ def threesquares(m):
         return True
 
 
-def repfree(s):
-    for char in str(s):
-        count = s.count(char)
-        if count > 1:
-            return False
+def refree(s):
+    for a in range(len(s)):
+        for b in range(a+1, len(s)):
+            if s[a] == s[b]:
+                return False
     return True
+
+print(refree("Chaitanya"))
 
 
 def hillvalley(l):
